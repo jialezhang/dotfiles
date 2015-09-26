@@ -2,4 +2,4 @@
 ** vimrc: configuration of my vim  
 ** zshrc: configuration of my zsh terminal 
 ** tmux.conf: configuration of my tmux 
-** bashrc: configuration of previous bash 
+** TODO bashrc: configuration of previous bash 
