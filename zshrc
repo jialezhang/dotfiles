@@ -44,6 +44,7 @@ export ANDROID_HOME=/usr/local/opt/android-sdk
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
 export PATH=~/npm-global/bin:$PATH 
 export PATH=/Applications/Juno.app/Contents/Resources/app/julia/bin:$PATH 
+export PATH=/usr/texbin:$PATH 
 export PATH=~/.gem/ruby/2.2.0/bin:$PATH 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 alias auto="xrandr --output VGA-1 --auto && xrandr --output LVDS-1 --auto"

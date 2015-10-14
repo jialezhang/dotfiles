@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <title>Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming | Simon Marlow | digital library bookzz</title>
+<base href="http://bookzz.org/">
+
+                        <meta charset="utf-8">		                       
+                        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+                        <meta name="title" content="Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming | Simon Marlow | digital library bookzz">
+			<meta name="description" content="Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming | Simon Marlow | digital library bookzz | bookzz. Download books for free. Find books">
+			<meta name="robots" content="index,all">
+			<meta name="distribution" content="global">
+			<meta http-equiv="cache-control" content="no-cache">
+			<meta http-equiv="pragma" content="no-cache">
+			
+	
+<!-- CSS SET -->
+<!-- JS SET --> 
+<link REL="SHORTCUT ICON" HREF="http://bookzz.org/favicon.ico">
+
+        <!-- dropdown css -->
+        <link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="css/dropdown/themes/flickr.com/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+        <link href="css/css3buttons.css" media="screen" rel="stylesheet" type="text/css" />
+
+        <!--[if lt IE 7]>
+        <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+        <![endif]-->
+
+
+        <link rel="stylesheet" type="text/css" href="img/default/root.css?version=0x914" />
+        <script type="text/javascript" language="JavaScript" src="scripts/root.js?version=0x914"></script>
+
+
+        <link rel="search" type="application/opensearchdescription+xml" href="http://cs1.bookzz.org/search.xml" title="ebooks download BookZZ.org" />
+
+        <link href="css/messi.min.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" language="JavaScript" src="scripts/messi.min.js"></script>
+    </head>
+
+    <body style="margin:0px;padding:0px;">
+
+        <table border="0" height="100%" width="100%" style="height:100%;" cellpadding="0" cellspacing="0"><tbody>
+                <tr style="height:10px;">
+                    <td>
+                        <div id="header">
+                            
+<div id="colorBoxes">
+    <ul>
+        <a href="/"><li style="background: #49afd0;">2,567,295 books</li></a>
+		<a href="http://booksc.org/"><li style="background: #90a5a8;">38,000,000 articles</li></a>
+        <li style="background: #8ecd51;">for free</li>
+    </ul>
+</div>
+
+<ul id="topAdditionaMenu" class="dropdown dropdown-horizontal">
+        <li>
+            <span class="dir"><a href="http://b-ok.org">Sign in</a></span>
+            <ul>
+                <li><a href="http://b-ok.org">Login</a></li>
+                <li><a href="registration.php">Registration</a></li>
+            </ul>
+        </li>
+    
+    <li>
+        <span class="dir"><a href="">Books</a></span>
+        <ul>
+            <li><a href="categories">Categories</a></li>
+            <li><a href="recently.php">Recently Added</a></li>
+            <li><a href="http://booksc.org/">Scientific articles</a></li>
+            <li><a href="book-add.php">Add book</a></li>
+        </ul>
+    </li>
+    <li>
+        <span class="dir">Library</span>
+        <ul>
+            <li><a href="help.php" title="Help">Help</a></li>
+            <li><a href="http://m.bookzz.org/" title="digital library - mobile version">Mobile version</a></li>
+            <li><a href="help.php#splugin" title="Install plugin">Plugin</a></li>
+            <li><a href="help.php#contacts" title="Contact with authors">Contacts</a></li>
+            <li><a href="privacy.php" title="Contact with authors">Privacy</a></li>
+            <li><a href="dmca.php" title="Contact with authors">DMCA</a></li>
+        </ul>
+    </li>
+    <li>
+        <span class="dir"><a href="http://en.bookzz.org">English</a></span>
+        <ul>
+<li><a onclick="setLanguage('ru'); return false;" href="http://ru.bookzz.org/book/2090615/a96dbd/?_ir=1">Русский</a></li><li><a onclick="setLanguage('ua'); return false;" href="http://ua.bookzz.org/book/2090615/a96dbd/?_ir=1">Українська</a></li><li><a onclick="setLanguage('pl'); return false;" href="http://pl.bookzz.org/book/2090615/a96dbd/?_ir=1">Polski</a></li><li><a onclick="setLanguage('it'); return false;" href="http://it.bookzz.org/book/2090615/a96dbd/?_ir=1">Italiano</a></li><li><a onclick="setLanguage('es'); return false;" href="http://es.bookzz.org/book/2090615/a96dbd/?_ir=1">Español</a></li><li><a onclick="setLanguage('zh'); return false;" href="http://zh.bookzz.org/book/2090615/a96dbd/?_ir=1">汉语</a></li><li><a onclick="setLanguage('id'); return false;" href="http://id.bookzz.org/book/2090615/a96dbd/?_ir=1">Bahasa Indonesia</a></li><li><a onclick="setLanguage('in'); return false;" href="http://in.bookzz.org/book/2090615/a96dbd/?_ir=1">हिन्दी</a></li><li><a onclick="setLanguage('pt'); return false;" href="http://pt.bookzz.org/book/2090615/a96dbd/?_ir=1">Português</a></li><li><a onclick="setLanguage('jp'); return false;" href="http://jp.bookzz.org/book/2090615/a96dbd/?_ir=1">日本語</a></li><li><a onclick="setLanguage('de'); return false;" href="http://de.bookzz.org/book/2090615/a96dbd/?_ir=1">Deutsch</a></li><li><a onclick="setLanguage('fr'); return false;" href="http://fr.bookzz.org/book/2090615/a96dbd/?_ir=1">Français</a></li><li><a onclick="setLanguage('th'); return false;" href="http://th.bookzz.org/book/2090615/a96dbd/?_ir=1">ภาษาไทย</a></li><li><a onclick="setLanguage('el'); return false;" href="http://el.bookzz.org/book/2090615/a96dbd/?_ir=1">ελληνικά </a></li><li><a onclick="setLanguage('ar'); return false;" href="http://ar.bookzz.org/book/2090615/a96dbd/?_ir=1">اللغة العربية</a></li>        </ul>
+    </li>
+    <li>
+        <a href="howtodonate.php" style="color:#8EB46A;text-decoration:underline;background-color:#fff;">Donate</a>
+    </li>
+</ul>                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding:20px 0" valign="top">
+            <center>
+                <div style="text-align:left; width:900px">
+                    <style>
+    .adFixW iframe{
+        width:100%;
+    }
+</style>
+
+<div style="padding:10px 0 0 0;text-align:center;">
+    <a class="h2" href="" title="Ebook library BookZZ.org">Main</a> <span style="font-size:16pt">→</span>
+    <h2 style="display:inline">Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming</h2>
+</div>
+<br/>
+
+<div  itemscope  itemtype="http://schema.org/Book">
+    <div style="overflow:hidden; zoom:1">
+        <div style="float: left; width:110px;padding:0 10px 0 0"><a itemprop="image"  class="lightbox" href="http://libgen.org/covers/936000/fcad24f53370aeea233f80ae9aa489e8-d.jpg" style="background:#fff;padding:3px; display:block;float:left; border:1px solid #ccc;min-width:100px; min-height:100px;"><img width="100" style="font-size:0px;" src="http://libgen.org/covers/936000/fcad24f53370aeea233f80ae9aa489e8-d.jpg" alt="Book cover Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming"/></a></div>
+        <div style="float:left; width:770px">
+            <h1 style="color:#49AFD0"  itemprop="name">Parallel and Concurrent Programming in Haskell: Techniques for Multicore and Multithreaded Programming</h1>
+            <i><a  itemprop="author" title="Find all the author's book" style="color:#000;" href="http://bookzz.org/g/Simon Marlow">Simon Marlow</a></i>
+                    </div>
+    </div>
+
+    <div style="overflow:hidden; zoom:1">
+        <div class="bookDetailsBox">
+                <div class="bookProperty">
+                    <span>Year:</span>
+                    2013
+                </div>
+                <div class="bookProperty">
+                    <span>Language:</span>
+                    English
+                </div>
+                <div class="bookProperty">
+                    <span>Pages:</span>
+                    322
+                </div></div>    </div>
+
+
+    <div style="overflow:hidden; margin:15px 0;">
+        <a class="button active dnthandler" href="http://bookzz.org/dl/2090615/73180c"><span class="downarrow icon"></span><b>Download </b> (pdf, 17.95 MB)</a>                <a class="button" href="ireader/2090615" target="_blank">Read online</a>
+
+        <span style="margin:0 0 0 30px;color:#888;">Mirrors:</span> <a class="ddownload color2 dnthandler" target="_blank" href="http://bookzz.org/dl/2090615/73180c?alt=1" title="Electronic library download book  ">[1]</a> <a class="ddownload color2 dnthandler" target="_blank" href="http://bookzz.org/dl/2090615/73180c?alt=2" title="Electronic library download book  ">[2]</a>    </div>
+    
+    
+    
+<!-- <iframe src="//ads.ad-center.com/smart_ad/display?ref=5022766&q=Parallel+and+Concurrent+Programming+in+Haskell%3A+Techniques+for+Multicore+and+Multithreaded+Programming&smart_ad_id=14230" width="728" height="90" frameborder="0" scrolling="no" allowtransparency="true"></iframe>  -->
+  
+    
+</div>
+
+<div>
+
+    <!-- <br clear="all" /> -->
+    <!-- <div style="background: #ED9111; height:4px; width: 100%; margin-bottom: 5px;">&nbsp;</div> -->
+         
+    <div>
+
+    </div>
+        
+    <br clear="all" />
+</div>
+
+
+
+<script type="text/javascript" src="scripts/jquery.lightbox-0.5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.lightbox-0.5.css" media="screen" />
+
+<script type="text/javascript">
+    $(function() {
+        // This, or...
+        $('a.lightbox').lightBox({
+            containerResizeSpeed: 1
+        }); // Select all links with lightbox class
+    });
+
+    /**
+     * jquery.readmore - Substring long paragraphs and make expandable with "more" link
+     * @date 7 July 2010
+     * @author Jake Trent  http://www.jtsnake.com/
+     * @version 1.1
+     */
+    (function($) {
+        $.fn.readmore = function(settings) {
+
+            var opts = $.extend({}, $.fn.readmore.defaults, settings);
+
+            this.each(function() {
+                $(this).data("opts", opts);
+                if ($(this).html().length > opts.substr_len) {
+                    abridge($(this));
+                    linkage($(this));
+                }
+            });
+
+            function linkage(elem) {
+                elem.append(elem.data("opts").more_link);
+                elem.children(".more").click(function() {
+                    $(this).hide();
+                    $(this).siblings("span:not(.hidden)").hide().siblings("span.hidden").animate({'opacity': 'toggle'}, 1000);
+                });
+            }
+
+            function abridge(elem) {
+                var opts = elem.data("opts");
+                var txt = elem.html();
+                var len = opts.substr_len;
+                var dots = "<span>" + opts.ellipses + "</span>";
+                var charAtLen = txt.substr(len, 1);
+                while (len < txt.length && !/\s/.test(charAtLen)) {
+                    len++;
+                    charAtLen = txt.substr(len, 1);
+                }
+                var shown = txt.substring(0, len) + dots;
+                var hidden = '<span class="hidden" style="display:none;">' + txt.substring(len, txt.length) + '</span>';
+                elem.html(shown + hidden);
+            }
+
+            return this;
+        };
+
+        $.fn.readmore.defaults = {
+            substr_len: 500,
+            ellipses: '&#8230;',
+            more_link: '  &nbsp;<a class="more" style="border-bottom:1px dashed;color:#8ECD51; cursor:pointer;">Read more → </a>'
+        };
+
+    })(jQuery);
+
+    $(function() {
+        $('#bookDescriptionBox').readmore({substr_len: 750});
+    });
+
+
+
+    // converter links
+    $('.converterLink').click(function(e) {
+        var el = $(e.currentTarget);
+        $('#converterStatusBox').html('Идет конвертация файла. Процесс может занять от нескольких секунд до 5-7 минут в зависимости от типа и размера файла. Ссылка на файл появится в этом окне.');
+        $('#converterStatusBox').css('display', 'block');
+        $(el).unbind('click');
+
+        $.ajax({
+            url: 'cs2/liveconverter/',
+            data: {
+                'source': el.attr('source'),
+                'output_format': el.attr('convertto'),
+                'input_format': el.attr('origformat')
+            },
+            dataType: 'json',
+            cache: false,
+            crossDomain: true,
+            success: function(resp) {
+                if (resp.error) {
+                    $('#converterStatusBox').html('<span class="error">' + resp.error + '</span>');
+                }
+
+                if (resp.url) {
+                    $('#converterStatusBox').html('<span class="convertSuccess">Готово. Ссылка на файл  <a href="' + resp.url + '" target="_blank">' + resp.url + '</a></span>');
+                }
+            },
+            failure: function() {
+            }
+        });
+
+
+    });
+</script>
+<link rel="stylesheet" type="text/css" href="css/jscomments/jscomments.css">
+
+<div style="background: #ED9111; height:4px; width: 100%; margin-bottom: 40px;">&nbsp;</div>
+
+
+<div id="jscommentsRootBox">
+    <div class="jscommentsFormBox">
+        <div style="width:65%; float:left;">
+            <form id="jscommentsForm" target="uploader" action="submit.php" method="POST">
+				<input type="hidden" name="book_id" value="2090615">
+				<input type="hidden" name="action" value="addReview">
+				<input type="hidden" name="rx" value="0">
+                <input id="jscommentsNamefield" name="name" type="textfield" placeholder="Your Name" value="" onchange="if(this.value){$(this).removeClass('error');}"/>
+                <textarea id="jscommentsTextarea" name="text" placeholder="Write a Review"  onchange="if(this.value){$(this).removeClass('error');}"></textarea>
+                <br clear="all" />
+                <a href="#" onclick="onReviewSubmit(); return false;" id="jscommentsButton">Post a Review</a><img id="jscommentsLoader" src="css/jscomments/loader.gif" style="position: relative; left: -35px; display: none;"/>
+            </form>
+        </div>
+        <div style="width:35%; float:left;" class="jscommentsFormHelp">
+            <div style="padding:10px 0 0 20px;  border-left:1px solid #ccc;">
+                You can write a book review and share your experiences. Other readers will always be interested in your opinion of the books you've read. Whether you've loved the book or not, if you give your honest and detailed thoughts then people will find new books that are right for them.
+            </div>
+        </div>
+    </div>
+    <div id="jscommentsCommentsBox"></div>
+</div>
+
+<script>
+	$('#jscommentsForm')[0].rx.value = 12;
+	
+	function onReviewSubmit()
+	{
+		$('#jscommentsForm')[0].submit();
+		
+		$('#jscommentsButton').css('width', $('#jscommentsButton').width() + 'px');
+		$('#jscommentsButton').data('originaltxt', $('#jscommentsButton')[0].innerHTML);
+		$('#jscommentsButton').text('Posting..'); // simulate server request
+		$('#jscommentsNamefield').attr("disabled", "disabled");
+		$('#jscommentsTextarea').attr("disabled", "disabled");
+		$('#jscommentsLoader').show();
+		
+	}
+	
+	function onReviewSubmitFailure()
+	{
+		$('#jscommentsButton').text($('#jscommentsButton').data('originaltxt'));
+        $('#jscommentsNamefield').removeAttr("disabled");
+        $('#jscommentsTextarea').removeAttr("disabled");
+		$('#jscommentsLoader').hide();
+	}
+	
+</script>                                    </div>
+            </center>
+        </td>
+    </tr>
+    <tr style="height:70px">
+        <td id="footer" valign="top">
+            <!-- footer begin -->
+            <!-- footer begin -->
+<div style="float:left;">
+    <table cellpadding="2" cellspacing="5"><tbody><tr>
+                <td>Share :</td>
+                <td style="padding-top: 7px;"><g:plusone size="medium" href="http://bookzz.org/"></g:plusone></td>
+        <td style="overflow:hidden;" valign="top">
+            <iframe src="http://www.facebook.com/plugins/like.php?app_id=128855137202847&amp;href=http%3A%2F%2Fbookzz.org%2F&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=true&amp;action=recommend&amp;colorscheme=light&amp;font&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:20px;float:right;margin-top:-3px;" allowTransparency="true"></iframe>
+        </td>
+        <td style="width:310px;overflow:hidden;">
+        </td>
+        <td>
+
+
+        </td>
+        </tr></tbody></table>
+</div>
+<div style="float: right; padding: 4px 20px 0pt 0pt;">
+    <a href=""></a><a href=""></a>
+</div>
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>        </td>
+    </tr>
+</tbody></table>
+
+<!-- ggAdditionalHtml -->
+
+            <script>
+                Config = {"currentLanguage":"en"};
+            </script>
+            <!--LiveInternet counter--><script type="text/javascript"><!--
+            new Image().src = "http://counter.yadro.ru/hit?r"+
+                escape(document.referrer)+((typeof(screen)=="undefined")?"":
+                ";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+                screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+                ";"+Math.random();//--></script><!--/LiveInternet-->
+
+<iframe name="uploader" id="uploader" style="border:0px solid #ddd; width:90%; display:none;"></iframe>
+       <!-- /ggAdditionalHtml -->
+
+</body>
+</html>
