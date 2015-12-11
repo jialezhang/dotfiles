@@ -40,7 +40,8 @@ XMODIFIERS=@im=fcitx
 plugins=() 
 
 source $ZSH/oh-my-zsh.sh
-
+#enbal gruvbox terminal theme
+export CLICOLOR=1
 export ANDROID_HOME=/usr/local/opt/android-sdk
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl
