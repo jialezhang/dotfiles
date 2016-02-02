@@ -7,7 +7,7 @@
 |--------------------+-----------------------------------------------------------------------------------------------------------|
 | g                  | prefix key                                                                                                |
 | h-j-k-l            | nav key to jump around left-up-down-right panel;                                                          |
-| H-J-K-L            | resize the panel for the direction of left-up-down-right pane                                             |
+| H-J-K-L            | resize the panel for the direction of left-up-down-right panel;                                          |
 | c                  | create new window                                                                                         |
 | n                  | next window                                                                                           |
 | esc                | change into `copy-mode`(I have configuration to set short press `control key` as esc by using [Karabiner] |
