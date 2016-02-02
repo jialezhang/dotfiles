@@ -12,7 +12,7 @@
 | H-J-K-L            | resize the panel for the direction of left-up-down-right panel;                                          |
 | c                  | create new window                                                                                         |
 | n                  | next window                                                                                           |
-| esc                | change into `copy-mode`(I have configuration to set short press `control key` as esc by using [Karabiner] |
+| esc                | change into `copy-mode`(I have configuration to set short press `control key` as esc by using [[https://pqrs.org/osx/karabiner/][Karabiner]] |
 | h-j-k-l(copy-mode) | move jump around left-up-down-right panel;                                                                |
 | r                  | relaod tmux config from ~/.tmux.conf                                                                      |
 | p                  | paste tmux clipboard content to curren tmux panel                                                         |
