@@ -1,6 +1,14 @@
 * some common configuration of my computer 
 ** vimrc: configuration of my vim  
 ** zshrc: configuration of my zsh terminal 
-** tmux.conf: configuration of my tmux 
+** tmux.conf: configuration of my tmux
+*** set "g" as the prefix key (because emacs shortkey);
+*** h-j-k-l as the nav key to jump around left-up-down-right panel;
+*** H-J-K-L to resize the panel for the direction of left-up-down-right panel;
+*** c : create new window;
+*** n: next window;
+*** esc: change into `copy-mode`(I have configuration to set short press `control key` as esc by using [Karabiner] ;
+*** h-j-k-l(copy-mode):move jump around left-up-down-right panel;
+*** .....
 ** TODO bashrc: configuration of previous bash 
 ** TODO create a setup.sh to auto import these configuration, eg:https://github.com/tankywoo/dotfiles
