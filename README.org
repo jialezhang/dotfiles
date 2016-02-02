@@ -1,7 +1,9 @@
 * my dotfile  configuration include git, tmux, zsh
 ** Install: 
-*** git clone git@github.com:jialezhang/dotfiles.git ~/.dotfiles
-*** ./setup.sh
+#+BEGIN_SRC shell
+git@github.com:jialezhang/dotfiles.git
+sh setup.sh
+#+END_SRC
 ** zshrc: configuration of my zsh terminal 
 ** tmux.conf: configuration of my tmux
 
