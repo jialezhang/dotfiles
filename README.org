@@ -1,5 +1,7 @@
-* some common configuration of my computer 
-** vimrc: configuration of my vim  
+* my dotfile  configuration include git, tmux, zsh
+** Install: 
+*** git clone git@github.com:jialezhang/dotfiles.git ~/.dotfiles
+*** ./setup.sh
 ** zshrc: configuration of my zsh terminal 
 ** tmux.conf: configuration of my tmux
 
@@ -24,5 +26,4 @@ for copy-mode: use normal vim-style short-key [v] to chose and [y] to copy curre
 | v/V | chose like vim                                                                             |
 | y   | send current content to the tmux clipboard and you can use prefix - p paste in normal mode |
 
-** TODO bashrc: configuration of previous bash 
-** TODO create a setup.sh to auto import these configuration, eg:https://github.com/tankywoo/dotfiles
+**  setup.sh modify this :https://github.com/tankywoo/dotfiles and just use create symbool link
