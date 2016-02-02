@@ -13,16 +13,16 @@
 | esc                | change into `copy-mode`(I have configuration to set short press `control key` as esc by using [Karabiner] |
 | h-j-k-l(copy-mode) | move jump around left-up-down-right panel;                                                                |
 | r                  | relaod tmux config from ~/.tmux.conf                                                                      |
-| p                  | paste tmux clipboard content to curren tmux panel                                                    |
+| p                  | paste tmux clipboard content to curren tmux panel                                                         |
+| prefix - C -c      | send tmux show-buffer content to the systemt clipboard and you can [⌘ + v] to paste anywhere you wan      |
+|                    |                                                                                                           |
 
 
-for copy-mode: use normal vim-style short-key [v] to chose and [y] to copy current content when you exit copy-mode,you can use [prefix + p] to paste;but this the content is  not in the system buffer;
-| key           | function                                                                                     |
-|---------------+----------------------------------------------------------------------------------------------|
-| v             | chose like vim                                                                               |
-| y             | send current content to the tmux clipboard and you can use prefix - p paste in normal mode   |
-| prefix - C -c | send current content to the systemt clipboard and you can [⌘ + v] to paste anywhere you want |
-|               |                                                                                              |
+for copy-mode: use normal vim-style short-key [v] to chose and [y] to copy current content when you exit copy-mode,you can use [prefix + p] to paste in tmux and you can use [prefix - C - c] send content to systemt clipboard;
+| key | function                                                                                   |
+|-----+--------------------------------------------------------------------------------------------|
+| v/V | chose like vim                                                                             |
+| y   | send current content to the tmux clipboard and you can use prefix - p paste in normal mode |
 
 ** TODO bashrc: configuration of previous bash 
 ** TODO create a setup.sh to auto import these configuration, eg:https://github.com/tankywoo/dotfiles
