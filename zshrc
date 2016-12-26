@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 export EDITOR="vim"
+export JIANXUN="/Users/gkjiale/workspace/code/jianxun"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -87,6 +88,7 @@ export TZ=Asia/Shanghai
 export CHROME_BIN=google-chrome-stable
 export PATH=$PATH:~/.cabal/bin:~/.xmonad/bin
 export PATH="/usr/local/Cellar/tinc/1.0.25/sbin:$PATH"
+export PATH=$PATH:/usr/local/mysql/bin
 PS1="$PS1"'$([ -n "$TMUX" ] && tmux setenv TMUXPWD_$(tmux display -p "#D" | tr -d %) "$PWD")'
 #alias for cnpm
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
@@ -121,3 +123,5 @@ export NVM_DIR="/Users/gkjiale/.nvm"
 #     test -z "$TMUX" && (tmux attach || tmux_init)
 # fi
 # source ~/.bin/tmuxinator.zsh
+
+export PATH="$HOME/.yarn/bin:$PATH"
